@@ -10,8 +10,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 20
-      - name: Install dependencies |
-        run: cd learning-actions/
-        run: npm ci
+      - name: Install dependencies
+        run: |
+          cd learning-actions/
+          npm ci
       - name: Run tests
         run: npm test
